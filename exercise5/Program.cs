@@ -19,4 +19,19 @@ namespace exercise5
             REAR = -1;
         }
     }
-}
+    public void insert(int element)
+    {
+        // This statement checks for the overflow condition.
+        if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1))
+        {
+            Console.WriteLine("\nQueue overflow\n");
+            return;
+        }
+        /*this following statement checks whether the queue is empty. if the queue is empty
+         * , then the value of the  RWAR and FRONT variables is set to 0 */
+        if ((FRONT == -1))
+        {
+            FRONT = 0;
+            REAR = 0;
+        }
+    }
